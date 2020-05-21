@@ -4,6 +4,19 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// database
+const mongoose = require('mongoose');
+
+// Connect mongoose to mongoDB
+var CONNECTION_URI =  process.env.MDB || "mongodb://localhost:27017/cms";
+mongoose.connect(CONNECTION_URI, {useNewUrlParser : true})
+  .then(response => {
+    console.log("Connected succesfully go mongodb");
+  })
+  .catch(err => {
+    console.log("Error in connecting to mongodb");
+  })
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
