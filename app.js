@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 // database
 const mongoose = require('mongoose');
+// handlebars
+const hbs = require('express-handlebars');
 
 // Connect mongoose to mongoDB
 var CONNECTION_URI =  process.env.MDB || "mongodb://localhost:27017/cms";
