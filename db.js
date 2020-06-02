@@ -3,8 +3,8 @@ var config = require('./config');
 var mysql = require('mysql')
   , async = require('async')
 
-var PRODUCTION_DB = config.dbname
-  , TEST_DB = config.dbname;
+var PRODUCTION_DB = config.dbname || process.env.DBNAME
+  , TEST_DB = config.dbname || process.env.DBNAME;
 
 exports.MODE_TEST = 'mode_test'
 exports.MODE_PRODUCTION = 'mode_production'
@@ -16,9 +16,9 @@ var state = {
 
 exports.connect = function(mode, done) {
   state.pool = mysql.createPool({
-    host: config.dbhost,
-    user: config.dbuser,
-    password: config.dbpwd,
+    host: config.dbhost || process.env.DBHOST,
+    user: config.dbuser || process.env.DBUSER,
+    password: config.dbpwd || process.env.DBPWD,
     database: mode === exports.MODE_PRODUCTION ? PRODUCTION_DB : TEST_DB
   });
 
