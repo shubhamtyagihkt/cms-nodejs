@@ -17,6 +17,44 @@ funcs.getAllPosts = function(callback) {
 	return true;
 }
 
+funcs.getSinglePost = function(id,callback) {
+	var qry = 'SELECT * FROM posts WHERE post_id = ?';
+	
+	db.get().query(qry, [id] ,function (err, result) {
+		return callback(err, result);
+	});
+	
+	return true;
+}
+
+funcs.updatePost = function(id,title,description,image_url,category,callback) {
+	var qry = 'UPDATE posts SET title = ?, description = ?, image_url = ? , category_id = ? WHERE post_id = 1';
+
+	db.get().query(qry, [title,description,image_url,category], function (err, result) {
+		return callback(err, result);
+	});
+
+	return true;
+}
+funcs.deletePost = function(id,callback) {
+	var qry = 'DELETE FROM posts WHERE post_id = ? ';
+	
+	db.get().query(qry, [id], function (err, result) {
+		return callback(err, result);
+	});
+
+	return true;
+}
+
+funcs.createPost = function(title,description,image_url,category, userid ,callback) {
+	var qry = 'INSERT INTO posts (title, description, image_url, category_id,user_id) VALUES ( ?, ?, ?, ?, ?) ';
+ 
+	db.get().query(qry, [title,description,image_url,category,userid], function (err, result) {
+		return callback(err, result);
+	});
+
+	return true;
+}
 
 // funcs.getCategoryItems = function(status, callback) {
 // 	var qry = 'SELECT * FROM items WHERE status = ?';
@@ -40,15 +78,6 @@ funcs.getAllPosts = function(callback) {
 // }
 
 
-// funcs.addElement = function(description, status, callback) {
-// 	var qry = 'INSERT INTO items (description, status) VALUES (?, ?)';
-
-// 	db.get().query(qry, [description, status], function (err, result) {
-// 		return callback(err, result);
-// 	});
-
-// 	return true;
-// }
 
 
 // funcs.editItem = function(id, description, callback) {
