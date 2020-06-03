@@ -1,5 +1,5 @@
-var config = require('./config');
-//var config = {};
+//var config = require('./config');
+var config = {};
 var mysql = require('mysql')
   , async = require('async')
 
