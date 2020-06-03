@@ -1,5 +1,5 @@
 var db = require('../db.js');
-var config = require('../config');
+// var config = require('../config');
 
 
 var funcs = {};

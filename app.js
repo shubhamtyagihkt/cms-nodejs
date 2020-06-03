@@ -26,7 +26,7 @@ var apiRouter = require('./routes/user_api_call');
 
 var app = express();
 var db = require('./db');
-var config = require('./config');
+// var config = require('./config');
 
 db.connect(db.MODE_PRODUCTION, function(err) {
   if (err) {
