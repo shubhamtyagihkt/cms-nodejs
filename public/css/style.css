@@ -8725,8 +8725,9 @@ textarea.form-control {
   height: inherit !important; }
 
 .ftco-animate {
-  opacity: 0;
-  visibility: hidden; }
+  /*opacity: 0;
+  visibility: hidden;*/
+   }
 
 .about-author img {
   -webkit-border-radius: 50%;
