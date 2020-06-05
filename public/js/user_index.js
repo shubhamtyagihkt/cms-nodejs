@@ -56,7 +56,7 @@ function getAllPosts() {
 		type: "POST",
 		contentType: "application/json",
 		data: JSON.stringify({}),
-		url: "http://localhost:3000/user_api_call/getAllPosts",
+		url: "/user_api_call/getAllPosts",
 		success: function(response) {
 			if(response.status == "success") {
 				showPosts(response.items);

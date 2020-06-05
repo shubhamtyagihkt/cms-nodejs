@@ -29,7 +29,7 @@ function getSinglePost(post_id){
 		type: "POST",
 		contentType: "application/json",
 		data: JSON.stringify({"id":post_id}),
-		url: "http://localhost:3000/user_api_call/getSinglePost",
+		url: "/user_api_call/getSinglePost",
 		success: function(response) {
 			if(response.status == "success") {
 				showSinglePost(response.items);
