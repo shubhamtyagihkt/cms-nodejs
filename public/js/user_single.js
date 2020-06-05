@@ -1,5 +1,8 @@
 window.onload = function () {
-	getSinglePost(2);
+
+	var id = document.getElementById("post-id");
+	getSinglePost(id.innerText);
+
 };
 
 

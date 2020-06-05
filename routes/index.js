@@ -19,7 +19,7 @@ router.get('/contact', function(req, res, next) {
   res.render('users/contact', { title: "Contact | Shubham Tyagi's Blog" });
 });
 router.get('/single', function(req, res, next) {
-  res.render('users/single', { title: "Contact | Shubham Tyagi's Blog" });
+  res.render('users/single', { title: "Contact | Shubham Tyagi's Blog",id: req.query.post_id});
 });
 
 

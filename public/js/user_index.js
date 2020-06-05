@@ -20,7 +20,10 @@ function showPosts(posts){
 			var month = currentDate.getMonth(); //Be careful! January is 0 not 1
 			var year = currentDate.getFullYear();
 
-			var dateString = date + "-" +(month + 1) + "-" + year;
+			const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+								  "Jul", "Aug", "Sep", "Octr", "Nov", "Dec"
+								];
+			var dateString = (monthNames[month]) +" " +date + ", " + year;
 			postlist+=
 			`
 			<li>
@@ -37,7 +40,7 @@ function showPosts(posts){
 									</p>
 								</div>
 							<p class="mb-4">`+post.description+`</p>
-							<p><a href="single" onclick="return showSinglePost(`+post.post_id+`);"class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
+							<p><a href="/single?post_id=`+post.post_id+`" class="btn-custom" >Read More <span class="ion-ios-arrow-forward"></span></a></p>
 						</div>
 				</div>
 			</div>
