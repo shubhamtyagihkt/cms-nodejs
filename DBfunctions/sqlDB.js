@@ -55,6 +55,15 @@ funcs.createPost = function(title,description,image_url,category, userid ,callba
 
 	return true;
 }
+funcs.getCategory = function(id ,callback) {
+	var qry = 'SELECT categories.name From posts INNER JOIN categories ON posts.category_id = categories.category_id WHERE post_id = ?';
+	
+	db.get().query(qry, [id], function (err, result) {
+		return callback(err, result);
+	});
+
+	return true;
+}
 
 // funcs.getCategoryItems = function(status, callback) {
 // 	var qry = 'SELECT * FROM items WHERE status = ?';
