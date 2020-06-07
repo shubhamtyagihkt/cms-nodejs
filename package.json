@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node -r dotenv/config ./bin/www"
   },
   "dependencies": {
     "async": "^3.2.0",
@@ -17,5 +17,8 @@
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "sql": "^0.78.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
