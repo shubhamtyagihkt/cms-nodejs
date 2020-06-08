@@ -1,3 +1,6 @@
+<div id="post-id" style="display:none;">{{{id}}}</div>
+
+
 <header id="header">
   <div class="container">
     <div class="row">
@@ -67,19 +70,15 @@
             <form>
               <div class="form-group">
                 <label>Post Title</label>
-                <input type="text" class="form-control" placeholder="Post Title" value="About">
+                <input type="text" class="form-control" placeholder="Post Title" value="About" id="post_title">
               </div>
               <div class="form-group">
                 <label>Post Body</label>
-                <textarea name="editor1" class="form-control" placeholder="Post Body">
+                <textarea name="editor1" class="form-control" placeholder="Post Body" id="post_description">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </textarea>
               </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" checked> Published
-                </label>
-              </div>
+              
               <div class="form-group">
                 {{!-- <input type="text" class="form-control" placeholder="Add Some Tags..." value="tag1, tag2"> --}}
                     
@@ -93,7 +92,7 @@
               </div>
               <div class="form-group">
                 <label>Image</label>
-                <input type="text" class="form-control" placeholder="Add Description..." value="Supported Types: Jpg / Jpeg / Png / Gif / Svg">
+                <input type="text" class="form-control" placeholder="Add Description..." value="Supported Types: Jpg / Jpeg / Png / Gif / Svg"  id="post_image">
               </div>
               <input type="submit" class="btn btn-default" value="Submit">
             </form>
@@ -144,3 +143,4 @@
     </div>
   </div>
 </div>
+<script type="text/javascript" src="../js/admin-edit.js"></script>

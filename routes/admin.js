@@ -15,7 +15,7 @@ router.get('/posts', function(req, res, next) {
 })
 
 router.get('/edit', function(req, res, next) {
-  res.render('admin/admin-edit', { title: "Contact | Shubham Tyagi's Blog" ,layout:'admin-layout'});
+  res.render('admin/admin-edit', { title: "Contact | Shubham Tyagi's Blog" ,layout:'admin-layout',id: req.query.post_id});
 })
 
 router.get('/index', function(req, res, next) {
