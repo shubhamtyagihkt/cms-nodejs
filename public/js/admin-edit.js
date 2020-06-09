@@ -1,8 +1,15 @@
 window.onload = function () {
-
+	var status = getParameterByName("status");
 	var id = document.getElementById("post-id");
 	getSinglePost(id.innerText);
-
+	if(status=="success"){
+		var alert = document.getElementById("alert");
+		alert.style.display = "block";
+		setTimeout(function(){
+			alert.style.display="none";
+		}, 3000)
+	}
+	
 };
 
 
@@ -16,10 +23,15 @@ function editPost(post){
 	postImage.value=post[0].image_url;
 
 }
-
-
-
-
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
 function getSinglePost(post_id){
 	$.ajax({
 		type: "POST",

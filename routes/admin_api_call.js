@@ -5,13 +5,12 @@ var db = require('../DBfunctions/sqlDB.js');
 
 router.post('/updatePost', function(req, res, next) {
 
-	console.log(req);
-	var id = req.query.id;
+	//console.log(req);
+	var id = req.body.id;
 	var title = req.body.title;
-	var description = req.body.description;
+	var description = req.body.editor1;
 	var image_url =req.body.image_url;
 	var category = req.body.category;
-
 
 	if(!id || !title || !description || !image_url || !category)
 	return res.json({ "status": "failed", "message": "Invalid Data!", "code": 500 });
@@ -23,8 +22,8 @@ router.post('/updatePost', function(req, res, next) {
 			console.log(err);
 			return res.json({ "status": "failed", "message": "DB Error!", "code": 500 });
 		}
-			
-		return res.json({ "status": "success", "message": "Items Received!", "code": 200, "items": result });
+	     res.redirect("/admin/edit?post_id="+id+"&status=success");
+		//return res.json({ "status": "success", "message": "Items Received!", "code": 200, "items": result });
 	});
 });
 

@@ -28,9 +28,9 @@ funcs.getSinglePost = function(id,callback) {
 }
 
 funcs.updatePost = function(id,title,description,image_url,category,callback) {
-	var qry = 'UPDATE posts SET title = ?, description = ?, image_url = ? , category_id = ? WHERE post_id = 1';
+	var qry = 'UPDATE posts SET title = ?, description = ?, image_url = ? , category_id = ? WHERE post_id = ?';
 
-	db.get().query(qry, [title,description,image_url,category], function (err, result) {
+	db.get().query(qry, [title,description,image_url,category,id], function (err, result) {
 		return callback(err, result);
 	});
 
