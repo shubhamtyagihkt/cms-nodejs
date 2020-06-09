@@ -38,7 +38,7 @@ var posts=[];
                 <td>`+post.title+`</td>
                 <td>`+updateString+`</td>
                 <td>`+dateString+`</td>
-                <td><a class="btn btn-default" href="edit">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                <td><a class="btn btn-default" href="edit?post_id=`+post.post_id+`">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
             </tr>
 			
 			`;

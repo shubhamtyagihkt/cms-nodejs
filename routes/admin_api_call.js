@@ -5,18 +5,13 @@ var db = require('../DBfunctions/sqlDB.js');
 
 router.post('/updatePost', function(req, res, next) {
 
-	var id = req.body.id;
+	console.log(req);
+	var id = req.query.id;
 	var title = req.body.title;
 	var description = req.body.description;
 	var image_url =req.body.image_url;
 	var category = req.body.category;
 
-	// console.log(title);
-	// console.log(description);
-	// console.log(image_url);
-	// console.log(id);
-	// console.log(category);
-	// console.log(req.body);
 
 	if(!id || !title || !description || !image_url || !category)
 	return res.json({ "status": "failed", "message": "Invalid Data!", "code": 500 });
@@ -36,8 +31,6 @@ router.post('/updatePost', function(req, res, next) {
 router.post('/deletePost', function(req, res, next) {
 
 	var id = req.body.id;
-
-	// console.log(id);
 	
 	if(!id)
 	return res.json({ "status": "failed", "message": "Invalid Data!", "code": 500 });

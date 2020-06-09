@@ -67,14 +67,14 @@
             <h3 class="panel-title">Post</h3>
           </div>
           <div class="panel-body">
-            <form>
+            <form action="admin_api_call/updatePost" method="POST">
               <div class="form-group">
                 <label>Post Title</label>
-                <input type="text" class="form-control" placeholder="Post Title" value="About" id="post_title">
+                <input type="text" class="form-control" placeholder="Post Title" value="About" id="post_title" name="title">
               </div>
               <div class="form-group">
                 <label>Post Body</label>
-                <textarea name="editor1" class="form-control" placeholder="Post Body" id="post_description">
+                <textarea name="description" class="form-control" placeholder="Post Body" id="post_description">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </textarea>
               </div>
@@ -83,7 +83,7 @@
                 {{!-- <input type="text" class="form-control" placeholder="Add Some Tags..." value="tag1, tag2"> --}}
                     
                   <label for="sel1">Category:</label>
-                  <select class="form-control" id="sel1">
+                  <select class="form-control" id="category" name="category">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -92,7 +92,7 @@
               </div>
               <div class="form-group">
                 <label>Image</label>
-                <input type="text" class="form-control" placeholder="Add Description..." value="Supported Types: Jpg / Jpeg / Png / Gif / Svg"  id="post_image">
+                <input type="text" class="form-control" placeholder="Add Description..." value="Supported Types: Jpg / Jpeg / Png / Gif / Svg"  id="post_image" name="image_url">
               </div>
               <input type="submit" class="btn btn-default" value="Submit">
             </form>
