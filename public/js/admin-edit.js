@@ -1,6 +1,7 @@
 window.onload = function () {
 	var status = getParameterByName("status");
 	var id = document.getElementById("post-id");
+	console.log(id);
 	getSinglePost(id.innerText);
 	if(status=="success"){
 		var alert = document.getElementById("alert");

@@ -41,7 +41,8 @@ router.post('/deletePost', function(req, res, next) {
 			return res.json({ "status": "failed", "message": "DB Error!", "code": 500 });
 		}
 			
-		return res.json({ "status": "success", "message": "Items Received!", "code": 200, "items": result });
+		//return res.json({ "status": "success", "message": "Items Received!", "code": 200, "items": result });
+		res.redirect("/admin/posts");
 	});
 });
 
@@ -51,14 +52,8 @@ router.post('/createPost', function(req, res, next) {
 	var description = req.body.description;
 	var image_url =req.body.image_url;
 	var category = req.body.category;
-	var userid = req.body.userid;
-	// console.log(title);
-	// console.log(description);
-	// console.log(image_url);
-	// console.log(id);
-	// console.log(category);
-	// console.log(req.body);
-
+	var userid = 1;
+    //change user id
 	if(!userid || !title || !description || !image_url || !category)
 	return res.json({ "status": "failed", "message": "Invalid Data!", "code": 500 });
 	
@@ -69,8 +64,9 @@ router.post('/createPost', function(req, res, next) {
 			console.log(err);
 			return res.json({ "status": "failed", "message": "DB Error!", "code": 500 });
 		}
-			
-		return res.json({ "status": "success", "message": "Items Received!", "code": 200, "items": result });
+		
+		res.redirect("/admin/posts");	
+		//return res.json({ "status": "success", "message": "Items Received!", "code": 200, "items": result });
 	});
 });
 
