@@ -41,8 +41,8 @@ router.post('/deletePost', function(req, res, next) {
 			return res.json({ "status": "failed", "message": "DB Error!", "code": 500 });
 		}
 			
-		//return res.json({ "status": "success", "message": "Items Received!", "code": 200, "items": result });
-		res.redirect("/admin/posts");
+		return res.json({ "status": "success", "message": "Items Received!", "code": 200, "items": result });
+		//res.redirect("/admin/posts");
 	});
 });
 

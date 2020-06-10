@@ -38,7 +38,8 @@ var posts=[];
                 <td>`+post.title+`</td>
                 <td>`+updateString+`</td>
                 <td>`+dateString+`</td>
-                <td><a class="btn btn-default" href="edit?post_id=`+post.post_id+`">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                <td><a class="btn btn-default" href="edit?post_id=`+post.post_id+`">Edit</a>
+                 <a class="btn btn-danger" onclick="deletepost(`+post.post_id+`)">Delete</a></td>
             </tr>
 			
 			`;
@@ -53,10 +54,25 @@ var posts=[];
 		postCount.innerText=posts.length;
 	}
 
-
-
-
-
+	function deletepost(post_id) {
+		$.ajax({
+			type: "POST",
+			contentType: "application/json",
+			data: JSON.stringify({"id":post_id}),
+			url: "/admin_api_call/deletePost",
+			success: function(response) {
+				if(response.status == "success") {
+					window.location.reload();
+			}
+			else {
+				console.log(response);
+			}
+		},
+		error: function(xhr, status, err) {
+			console.log(err.toString());
+		}
+	});
+	}
 
 	function getAllPosts() {
 		$.ajax({
