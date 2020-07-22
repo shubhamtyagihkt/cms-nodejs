@@ -15,8 +15,8 @@ CMS’ also store all of your online content for you in one place and is availab
 Investing in a content management system can save you both time and money. With a content management system in place, you no longer have to rely on a web developer to make common site changes. You can instantly make these changes yourself exactly when you need them done.
 
 # Data Base Design
-![User Category Post Schema Logical View](/public/images/cms_schema.jpg)
-![Posts Schema Code](/public/images/cms-sql.jpg)
+![User Category Post Schema Logical View](/public/images/cms_schema.JPG)
+![Posts Schema Code](/public/images/cms-sql.JPG)
 
 ![Posts Schema Code](/public/images/flow_diagram.png)
 
