@@ -26,7 +26,7 @@ Investing in a content management system can save you both time and money. With 
     Html
     Css
     Sql
-    Nodejs
+    Nodej
     Expressjs
     SQL
 
