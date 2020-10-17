@@ -1,8 +1,8 @@
 # Project Description
 
-    1. A content management system, often abbreviated as CMS,  is software that helps users create, manage, and modify content on a  website without the need for specialized technical knowledge.
-    2. In simpler language, a content management system is a tool that helps  you build a website without needing to write all the code from scratch  (or even know how to code at all).
-    3. Instead of building your own system for creating web pages, storing  images, and other functions, the content management system handles all  that basic infrastructure stuff for you so that you can focus on more  forward-facing parts of your website.
+1. A content management system, often abbreviated as CMS,  is software that helps users create, manage, and modify content on a  website without the need for specialized technical knowledge.
+2. In simpler language, a content management system is a tool that helps  you build a website without needing to write all the code from scratch  (or even know how to code at all).
+3. Instead of building your own system for creating web pages, storing  images, and other functions, the content management system handles all  that basic infrastructure stuff for you so that you can focus on more  forward-facing parts of your website.
 
 # Motivation to Make This Project
 1. No Web Programming Experience? No Problem!
@@ -15,7 +15,18 @@ CMS’ also store all of your online content for you in one place and is availab
 Investing in a content management system can save you both time and money. With a content management system in place, you no longer have to rely on a web developer to make common site changes. You can instantly make these changes yourself exactly when you need them done.
 
 # Data Base Design
-![User Category Post Schema Logical View]()
-![Posts Schema Code]()
+![User Category Post Schema Logical View](/public/images/cms_schema.JPG)
+![Posts Schema Code](/public/images/cms-sql.JPG)
 
-![Posts Schema Code]()
+![Posts Schema Code](/public/images/flow_diagram.png)
+
+
+# Technologies Used
+    Javascript
+    Html
+    Css
+    Sql
+    Nodej
+    Expressjs
+    SQL
+
