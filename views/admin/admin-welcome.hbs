@@ -1,0 +1,15 @@
+<script type="text/javascript">
+
+	$(document).ready(function () {
+		var token = checkLogin();
+
+	    if (token == "") {
+	    	deleteCookies();
+	    	window.location = "admin/login";
+	    }
+	    else {
+		    window.location = "admin/index";
+	    }
+	});
+	
+</script>

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-center"><br><small>Account Login</small></h1>
+        <h1 class="text-center"> <small>Account Registration</small></h1>
       </div>
     </div>
   </div>
@@ -29,20 +29,23 @@
 </section> --}}
 
 <div class="text-center" style="max-width: 500px; margin: auto;">
-  <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+  <h1 class="h3 mb-3 font-weight-normal">Register</h1>
 
   <form>
+    <div class="form-group mb-3">
+      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+    </div>
     <div class="form-group mb-3">
       <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
     </div>
     <div class="form-group mb-3">
       <input type="password" class="form-control" id="password" placeholder="Enter password" required>
     </div>
-    <input type="button" class="btn btn-primary" value="Login" onclick="submitLoginForm()" />
+    <input type="button" class="btn btn-primary" value="Register" onclick="submitRegisterForm()" />
   </form>
 
   <br />
   <br />
-  <p>New User? <a href="/admin/register">Register</a></p>
+  <p>Already Registered? <a href="/admin/login">Login</a></p>
 </div>
-<script type="text/javascript" src="/js/admin-login.js"></script>
+<script type="text/javascript" src="/js/admin-register.js"></script>
